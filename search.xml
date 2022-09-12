@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>我的markdown笔记</title>
+      <link href="/2022/09/12/wo-de-markdown-bi-ji/"/>
+      <url>/2022/09/12/wo-de-markdown-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Typora </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Nosql</title>
       <link href="/2022/09/06/nosql-xue-xi-zhi-lu/"/>
       <url>/2022/09/06/nosql-xue-xi-zhi-lu/</url>
@@ -11,10 +38,16 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> 数据库 </tag>
+            <tag> Nosql </tag>
             
         </tags>
       
@@ -30,6 +63,12 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> 使用与维护电脑 </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -42,12 +81,18 @@
     
     
     <entry>
-      <title>编程遇到的问题解决|</title>
+      <title>编程遇到的问题及解决|</title>
       <link href="/2022/09/06/bian-cheng-yu-dao-de-wen-ti-jie-jue/"/>
       <url>/2022/09/06/bian-cheng-yu-dao-de-wen-ti-jie-jue/</url>
       
         <content type="html"><![CDATA[]]></content>
       
+      
+      <categories>
+          
+          <category> BUG </category>
+          
+      </categories>
       
       
         <tags>
@@ -65,13 +110,19 @@
       <link href="/2022/09/06/qian-duan-web-ying-yong-kai-fa-ji-chu-pian/"/>
       <url>/2022/09/06/qian-duan-web-ying-yong-kai-fa-ji-chu-pian/</url>
       
-        <content type="html"><![CDATA[<h1 id="基础篇"><a href="#基础篇" class="headerlink" title="基础篇"></a>基础篇</h1><h2 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h2><h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h2 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h2>]]></content>
+        <content type="html"><![CDATA[<h1 id="基础篇"><a href="#基础篇" class="headerlink" title="基础篇"></a>基础篇</h1><h2 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>你好呀！<span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h2 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h2>]]></content>
       
+      
+      <categories>
+          
+          <category> 前端Web应用开发 </category>
+          
+      </categories>
       
       
         <tags>
             
-            <tag> 前端Web开发 </tag>
+            <tag> Web </tag>
             
         </tags>
       
