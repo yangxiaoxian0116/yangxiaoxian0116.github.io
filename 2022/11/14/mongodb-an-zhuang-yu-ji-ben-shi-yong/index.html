@@ -506,14 +506,21 @@
 </blockquote>
 <p>​    port=27017  </p>
 <h2 id="3-服务"><a href="#3-服务" class="headerlink" title="3. 服务"></a>3. 服务</h2><p> 启动 MongoDB 服务器可以使用–dbpath 参数指定数据文件的存储路径。 </p>
-<p>#启动服务  mongod  </p>
-<p>#启动服务，并且指定数据文件存放路径  mongod –dbpath D:\mongodb\data  </p>
-<p>#必须验证，先创建用户  mongod –auth –port 27017 –dbpath D:\mongodb\data  </p>
+<p>#启动服务  </p>
+<p>mongod  </p>
+<p>#启动服务，并且指定数据文件存放路径  </p>
+<p>mongod –dbpath D:\mongodb\data  </p>
+<p>#必须验证，先创建用户  </p>
+<p>mongod –auth –port 27017 –dbpath D:\mongodb\data  </p>
 <p>在 windows 中可以将 mongod 安装为服务，然后可以配置自动启动。  安装程序将调用如下命令安装 MongoDB 服务  </p>
-<p>#安装服务  mongod –config “../mongo.conf” –install –serviceName “MongoDB”    </p>
-<p> #启动服务  net start mongodb  </p>
-<p>#停止服务  net stop mongodb  </p>
-<p>#删除服务  mongod –remove –serviceName “MongoDB”  </p>
+<p>#安装服务  </p>
+<p>mongod –config “../mongo.conf” –install –serviceName “MongoDB”    </p>
+<p> #启动服务  </p>
+<p>net start mongodb  </p>
+<p>#停止服务  </p>
+<p>net stop mongodb  </p>
+<p>#删除服务  </p>
+<p>mongod –remove –serviceName “MongoDB”  </p>
 <p>客户端图形界面 Compass 可安装也可不安装：打钩安装或不打钩不安装。  </p>
 <p>也可安装 MongoDB 服务器完毕后，单独安装客户端图形界面 Compass。  </p>
 <p>还可考虑安装第三方客户端导航猫 NaviCat。</p>
