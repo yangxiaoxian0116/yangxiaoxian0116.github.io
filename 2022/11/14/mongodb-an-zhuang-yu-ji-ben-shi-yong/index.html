@@ -481,29 +481,29 @@
 <p>在 Windows 下安装完成，只需要简单的配置一下就可以使用。  </p>
 <p>安装的时候，建议不要安装在 C 盘，假设安装在 D:\mongodb\。</p>
 <h1 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h1><p>如上图所示，MongoDB 的安装目录下的 mongo.conf文件是 MongoDB 的配置 文件。  </p>
-<ul>
-<li>数据库路径  </li>
-</ul>
+<blockquote>
+<p>数据库路径  </p>
+</blockquote>
 <p>​    dbpath=D:\mongodb\data\ </p>
-<ul>
-<li>日志输出文件路径  </li>
-</ul>
+<blockquote>
+<p>日志输出文件路径  </p>
+</blockquote>
 <p>​    logpath=D:\mongodb\log\mongo.log  </p>
-<ul>
-<li>错误日志采用追加模式  </li>
-</ul>
+<blockquote>
+<p>错误日志采用追加模式  </p>
+</blockquote>
 <p>​    logappend=true </p>
-<ul>
-<li>启用日志文件，默认启用  </li>
-</ul>
+<blockquote>
+<p>启用日志文件，默认启用  </p>
+</blockquote>
 <p>​    journal=true  </p>
-<ul>
-<li>这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为 </li>
-</ul>
+<blockquote>
+<p>这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为 </p>
+</blockquote>
 <p>​    false  quiet=true  </p>
-<ul>
-<li>端口号 默认为 27017  </li>
-</ul>
+<blockquote>
+<p>端口号 默认为 27017  </p>
+</blockquote>
 <p>​    port=27017  </p>
 <h1 id="3-服务"><a href="#3-服务" class="headerlink" title="3. 服务"></a>3. 服务</h1><p> 启动 MongoDB 服务器可以使用–dbpath 参数指定数据文件的存储路径。 </p>
 <p>#启动服务  mongod  </p>
