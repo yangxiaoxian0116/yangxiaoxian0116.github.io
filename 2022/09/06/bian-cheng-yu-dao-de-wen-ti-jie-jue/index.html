@@ -5,7 +5,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="编程遇到的问题及解决|, Dashlll">
-    <meta name="description" content="">
+    <meta name="description" content="hexo无法显示图片
+检查图床照片链接，发现没有问题。
+
+用Chrome打开图片位置检查，发现发生403错误，如下图。
+403说明这个网络资源这样获取是被拒绝的。
+
+
+解决方法：
+
+只需要在markdown文章开头添加
+
+
+​       ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -464,7 +476,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    93
                 </div>
                 
 
@@ -481,7 +493,20 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="hexo无法显示图片"><a href="#hexo无法显示图片" class="headerlink" title="hexo无法显示图片"></a>hexo无法显示图片</h2><ol>
+<li><p>检查图床照片链接，发现没有问题。</p>
+</li>
+<li><p>用Chrome打开图片位置检查，发现发生403错误，如下图。</p>
+<p>403说明这个网络资源这样获取是被拒绝的。</p>
+<p><img src="C:/Users/%E5%85%AE%E5%AD%90/AppData/Roaming/Typora/typora-user-images/image-20221114221859820.png" alt="image-20221114221859820"></p>
+<ul>
+<li>解决方法：</li>
+</ul>
+<p>只需要在markdown文章开头添加</p>
+<meta name="referrer" content="no-referrer" /></li>
+</ol>
+<p>​                最后重新上传到博客图片就可以正常显示了。</p>
+
                 
             </div>
             <hr/>
@@ -999,7 +1024,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">1.9k</span>
+                        class="white-color">2k</span>
             
             
             
