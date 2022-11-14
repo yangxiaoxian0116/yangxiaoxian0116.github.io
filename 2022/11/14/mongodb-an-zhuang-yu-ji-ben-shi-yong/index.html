@@ -482,72 +482,75 @@
 <p><img src="https://gitee.com/yxx_xxy/Images/raw/master/bigData_Nosql/image-20221114124729218.png" alt="image-20221114124729218"></p>
 <p>在 Windows 下安装完成，只需要简单的配置一下就可以使用。  </p>
 <p>安装的时候，建议不要安装在 C 盘，假设安装在 D:\mongodb\。</p>
-<h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h2><p>如上图所示，MongoDB 的安装目录下的 mongo.conf文件是 MongoDB 的配置 文件。  </p>
-<blockquote>
+<h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h2><p>如上图所示，MongoDB 的安装目录下的==mongo.conf==文件是 MongoDB 的配置 文件。  </p>
 <p>数据库路径  </p>
-</blockquote>
 <p>​    dbpath=D:\mongodb\data\ </p>
-<blockquote>
 <p>日志输出文件路径  </p>
-</blockquote>
 <p>​    logpath=D:\mongodb\log\mongo.log  </p>
-<blockquote>
 <p>错误日志采用追加模式  </p>
-</blockquote>
 <p>​    logappend=true </p>
-<blockquote>
 <p>启用日志文件，默认启用  </p>
-</blockquote>
 <p>​    journal=true  </p>
-<blockquote>
-<p>这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为 </p>
-</blockquote>
-<p>​    false  quiet=true  </p>
-<blockquote>
+<p>这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为 false  </p>
+<p>​    quiet=true  </p>
 <p>端口号 默认为 27017  </p>
-</blockquote>
 <p>​    port=27017  </p>
 <h2 id="3-服务"><a href="#3-服务" class="headerlink" title="3. 服务"></a>3. 服务</h2><p> 启动 MongoDB 服务器可以使用–dbpath 参数指定数据文件的存储路径。 </p>
-<p>#启动服务  </p>
-<p>mongod  </p>
-<p>#启动服务，并且指定数据文件存放路径  </p>
-<p>mongod –dbpath D:\mongodb\data  </p>
-<p>#必须验证，先创建用户  </p>
-<p>mongod –auth –port 27017 –dbpath D:\mongodb\data  </p>
+<p>启动服务  </p>
+<p>​    mongod  </p>
+<p>启动服务，并且指定数据文件存放路径  </p>
+<p>​    mongod –dbpath D:\mongodb\data  </p>
+<p>必须验证，先创建用户  </p>
+<p>​    mongod –auth –port 27017 –dbpath D:\mongodb\data  </p>
 <p>在 windows 中可以将 mongod 安装为服务，然后可以配置自动启动。  安装程序将调用如下命令安装 MongoDB 服务  </p>
-<p>#安装服务  </p>
-<p>mongod –config “../mongo.conf” –install –serviceName “MongoDB”    </p>
-<p> #启动服务  </p>
-<p>net start mongodb  </p>
-<p>#停止服务  </p>
-<p>net stop mongodb  </p>
-<p>#删除服务  </p>
-<p>mongod –remove –serviceName “MongoDB”  </p>
+<p>安装服务  </p>
+<p>​    mongod –config “../mongo.conf” –install –serviceName “MongoDB”    </p>
+<p> 启动服务  </p>
+<p>​    net start mongodb  </p>
+<p>停止服务  </p>
+<p>​    net stop mongodb  </p>
+<p>删除服务  </p>
+<p>​    mongod –remove –serviceName “MongoDB”  </p>
 <p>客户端图形界面 Compass 可安装也可不安装：打钩安装或不打钩不安装。  </p>
 <p>也可安装 MongoDB 服务器完毕后，单独安装客户端图形界面 Compass。  </p>
 <p>还可考虑安装第三方客户端导航猫 NaviCat。</p>
 <h2 id="4-连接-MongoDB-服务器"><a href="#4-连接-MongoDB-服务器" class="headerlink" title="4. 连接 MongoDB 服务器"></a>4. 连接 MongoDB 服务器</h2><p>可以通过 MongoDB 自带的客户端 mongo shell 来连接 MongoDB 服务器。 </p>
-<p>#默认 host:localhost 端口:27017  </p>
-<p>mongo  </p>
-<h2 id="5-常用命令"><a href="#5-常用命令" class="headerlink" title="5. 常用命令"></a>5. 常用命令</h2><p>#查看数据库列表  show dbs  </p>
-<p>#选择数据库，格式：use 数据库名  </p>
-<p>use employee  </p>
-<p>#查看数据库中的集合(表)列表  show tables  show collections  </p>
-<p>#创建集合(表)  db.createCollection(“teacher”) </p>
-<p>#删除集合  db.collection-name.drop()  </p>
-<p>#向数据库的集合中添加数据  db.collection-name.insert()  </p>
-<p>#查找集合中的数据  db.collection-name.find()  </p>
-<p>#限制查找数据的数量，可以使用 limit 函数  db.collection-name.find().limit(num)  </p>
-<p>#跳过指定的数据，可以使用 skip 函数  db.collection-name.find().skip(num)  </p>
-<p>#获得查找的数据的长度，可以使用 count 函数  db.collection-name.find().count()  </p>
-<p>#查找集合中的一个数据  db.collection-name.findOne()  </p>
-<p>#删除集合中的数据  db.collection-name.remove()  </p>
-<p>#删除 name=value 的第 1 条数据  db.collection-name.remove({name:’value’},1)  </p>
-<p>#更新 name=value 的第 1 个数据为 update-value  db.collection-name.update({name:’value’},{$set:{name:’update-value’}})  </p>
-<p>#更新所有 name=value 的数据为 update-value  db.collection-name.update({name:’value’}, {$set:{name:’update-value’}},  {multi:true})</p>
+<p>默认 host:localhost 端口:27017  </p>
+<p>​    ==mongo==  </p>
+<h2 id="5-常用命令"><a href="#5-常用命令" class="headerlink" title="5. 常用命令"></a>5. 常用命令</h2><p>查看数据库列表  </p>
+<p>​    show dbs  </p>
+<p>选择数据库，格式：use 数据库名  </p>
+<p>​    use employee  </p>
+<p>查看数据库中的集合(表)列表  </p>
+<p>​    show tables  </p>
+<p>​    show collections  </p>
+<p>创建集合(表)  </p>
+<p>​    db.createCollection(“teacher”) </p>
+<p>删除集合  </p>
+<p>​    db.collection-name.drop()  </p>
+<p>向数据库的集合中添加数据  </p>
+<p>​    db.collection-name.insert()  </p>
+<p>查找集合中的数据  </p>
+<p>​    db.collection-name.find()  </p>
+<p>限制查找数据的数量，可以使用 limit 函数  </p>
+<p>​    db.collection-name.find().limit(num)  </p>
+<p>跳过指定的数据，可以使用 skip 函数  </p>
+<p>​    db.collection-name.find().skip(num)  </p>
+<p>获得查找的数据的长度，可以使用 count 函数  </p>
+<p>​    db.collection-name.find().count()  </p>
+<p>查找集合中的一个数据  </p>
+<p>​    db.collection-name.findOne()  </p>
+<p>删除集合中的数据  </p>
+<p>​    db.collection-name.remove()  </p>
+<p>删除 name=value 的第 1 条数据  </p>
+<p>​    db.collection-name.remove({name:’value’},1)  </p>
+<p>更新 name=value 的第 1 个数据为 update-value  </p>
+<p>​    db.collection-name.update({name:’value’},{$set:{name:’update-value’}})  </p>
+<p>更新所有 name=value 的数据为 update-value  </p>
+<p>​    db.collection-name.update({name:’value’}, {$set:{name:’update-value’}},  {multi:true})</p>
 <h2 id="6-通过-Java-驱动连接"><a href="#6-通过-Java-驱动连接" class="headerlink" title="6. 通过 Java 驱动连接"></a>6. 通过 Java 驱动连接</h2><p>// 使用用户 admin 使用密码 123456 连接到本地的 MongoDB 服务上  </p>
 <p>MongoClient mongoClient =  MongoClients.create(“mongodb://admin:123456@localhost/“);  </p>
-<p>// 使用用户 admin 使用密码 123456 连接到本地的 MongoDB 服务的 test 库 上  </p>
+<p>//使用用户 admin 使用密码 123456 连接到本地的 MongoDB 服务的 test 库 上  </p>
 <p>mongoClient =  MongoClients.create(“mongodb://admin:123456@localhost/test”);  </p>
 <p>// 默认 27017 端口 </p>
 <p>mongoClient = MongoClients.create(“mongodb://localhost”);  mongoClient = MongoClients.create(“mongodb://fred:foobar@localhost”); </p>
@@ -562,7 +565,7 @@
 <p>mongoClient =  MongoClients.create(“mongodb://host1,host2,host3/?safe=true;w=2;wtimeoutM S=2000”);  </p>
 <p>除了直接使用 MongoDB 驱动的方式，还可以使用 spring-data-mongodb 的： Repository 和 MongoTemplate 方式，相对来说提供了更稳定的抽象层，更方便 使用和维护。 </p>
 <h2 id="7-用户与密码"><a href="#7-用户与密码" class="headerlink" title="7. 用户与密码"></a>7. 用户与密码</h2><p>MongoDB 默认没有设置用户名密码，需要我们自己设置。简单来说首先设置一 个管理所有用户角色的用户 admin，然后根据需要为此用户添加其他角色即可  </p>
-<p>#提示输入方式，4.2.0 版本之后  </p>
+<p>提示输入方式，4.2.0 版本之后  </p>
 <p>use admin  </p>
 <p>db.createUser(  </p>
 <p>{  </p>
@@ -571,7 +574,7 @@
 <p>roles: [ { role: “userAdminAnyDatabase”, db: “admin” }, “readWriteAnyDatabase” ]  </p>
 <p>}  </p>
 <p>)  </p>
-<p>#明文方式  </p>
+<p>明文方式  </p>
 <p>use admin  </p>
 <p>db.createUser(  </p>
 <p>{  </p>
@@ -580,7 +583,7 @@
 <p>roles: [ { role: “userAdminAnyDatabase”, db: “admin” } ]  </p>
 <p>}  </p>
 <p>)  </p>
-<p>#授权 auth 之前，必须先 use 到指定数据库  </p>
+<p>授权 auth 之前，必须先 use 到指定数据库  </p>
 <p>use admin  </p>
 <p>db.auth(“myUserAdmin”, “abc123”)  </p>
 <p>use test  </p>
